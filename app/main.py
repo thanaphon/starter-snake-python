@@ -66,15 +66,13 @@ def move():
     #[ x for x in directions if x not in avoidlist]
     # set(directions) -set(avoidlist)    
     print (data)
+    direction = 'up'
     
-	direction = 'up'
-
-	while direction in avoidlist
-		direction = random.choice(directions)
-	
-	print ("Moving %s" % direction)
+    while direction in avoidlist:
+        direction = random.choice(directions)
+    print ("Moving %s" % direction)
     
-	return MoveResponse(direction)
+    return MoveResponse(direction)
 
 
 @bottle.post('/end')
