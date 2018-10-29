@@ -48,7 +48,7 @@ def get_prevmove(bodylog):
        return 'right'
    return 'stay'
 
-OPP_dir = {'up' : 'down' ,  'down' : 'up' , 'left' : 'right' , 'right': 'left'}    
+OPP_dir = {'up' : 'down' ,  'down' : 'up' , 'left' : 'right' , 'right': 'left','stay':'None'}    
 
 @bottle.post('/move')
 def move():
@@ -62,9 +62,11 @@ def move():
     
     #1) cannot get previous moving direction: move up y-1
     avoidlist = []
-    avoidlist.append(OPP_dir(get_prevmove(data['you']))) 
+    avoidlist.append(OPP_dir[get_prevmove(data['you'])]) 
     #[ x for x in directions if x not in avoidlist]
     # set(directions) -set(avoidlist)    
+    print(avoidlist)
+    
     print (data)
     direction = 'up'
     
