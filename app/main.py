@@ -30,11 +30,11 @@ def start():
     print ("Starting game %s" % data["game"]["id"])
     return StartResponse("#00ff00")
 
-def peek_next(head, moving_ch):
+#def peek_next(head, moving_ch):
     
     
-def check_collision(data,moving_ch):
-    next_loc = data['you']['body']
+#def check_collision(data,moving_ch):
+#    next_loc = data['you']['body']
     
 def get_prevmove(bodylog):
    (py,px) =  (bodylog['body'][0]['y'] - bodylog['body'][1]['y'], bodylog['body'][0]['x'] - bodylog['body'][1]['x'])
@@ -69,8 +69,8 @@ def move():
     
 	direction = 'up'
 
-	#while direction in avoidlist
-	#	direction = random.choice(directions)
+	while direction in avoidlist
+		direction = random.choice(directions)
 	
 	print ("Moving %s" % direction)
     
