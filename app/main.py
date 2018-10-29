@@ -69,8 +69,8 @@ def move():
     
 	direction = 'up'
 
-	while direction in avoidlist
-		direction = random.choice(directions)
+	#while direction in avoidlist
+	#	direction = random.choice(directions)
 	
 	print ("Moving %s" % direction)
     
